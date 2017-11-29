@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="TasksCtrl as vm">
+    Name:<h3 ng-click="vm.rename()">{{vm.currentTask.name}}</h3>
+
+    <form name="formName" ng-show="vm.renameActive" ng-submit="vm.rename(newName)">
+        <input type="text" ng-model="newName" name="newName">
+        <input type="submit">
+    </form>
+    Status: <h3>{{vm.currentTask.obj_status}}</h3>
+    Tags: <h3>{{vm.currentTask.tags}}</h3>
+    Actual effort: <h3>{{vm.currentTask.actual_effort}}</h3>
+    Estimated effort: <h3>{{vm.currentTask.estimated_effort}}</h3>
+    Due date: <h3>{{vm.currentTask.due_date | date}}</h3>
+    Description: <h3>{{vm.currentTask.description}}</h3>
+
+</div>
+</body>
+</html>

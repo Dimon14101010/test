@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table-task</title>
+</head>
+<body>
+<table ng-controller="TasksCtrl as vm">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Tags</th>
+    <th>Acctual effort</th>
+    <th>Estimated effort</th>
+    <th>Due date</th>
+    <tr ng-repeat="tasks in vm.activeTasks">
+        <td>{{tasks.id}}</td>
+        <td ui-sref="task({id: tasks.id})">{{tasks.name}}</td>
+        <td>{{tasks.tags}}</td>
+        <td>{{tasks.actual_effort}}</td>
+        <td>{{tasks.estimated_effort}}</td>
+        <td>{{tasks.due_date | date}}</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "test_task_ardas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "static-server -n index.html -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriy Nekrasov",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-ui-router": "^0.4.3"
+  },
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.3.0"
+  }
+}
