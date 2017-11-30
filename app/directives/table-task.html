@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>table-task</title>
+    <style>
+        .highPriority {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <table ng-controller="TasksCtrl as vm">
@@ -14,7 +20,7 @@
     <th>Due date</th>
     <tr ng-repeat="tasks in vm.activeTasks">
         <td>{{tasks.id}}</td>
-        <td ui-sref="task({id: tasks.id})">{{tasks.name}}</td>
+        <td ui-sref="task({id: tasks.id})" ng-class="{highPriority:tasks.is_high_priority}">{{tasks.name}}</td>
         <td>{{tasks.tags}}</td>
         <td>{{tasks.actual_effort}}</td>
         <td>{{tasks.estimated_effort}}</td>
