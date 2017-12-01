@@ -24,6 +24,7 @@
         vm.rename = function(newName){
             vm.renameActive = !vm.renameActive;
             vm.currentTask.name = newName;
+            TasksModel.setData(newName);
         }
 
 
